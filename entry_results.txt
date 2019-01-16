@@ -1,0 +1,23 @@
+VDF competition results 
+Average time over 10 discriminants as specified by commitment script
+
+1) bulaiden        40.65
+2) sundersoft      46.13
+3) akashnil        53.25
+4) pulledpork      84.56
+5) anonymous1      88.58
+6) pulmark        112.89
+7) psa            128.80
+8) anonymous2     140.83
+
+Disqualified:
+ 
+cryptoslava  
+6 discriminants did not finish
+Working discriminants ran in 34.69 average
+
+poanetwork 
+Late submission (code finished after deadline at link below)
+https://github.com/poanetwork/vdf
+132.16 average for late version
+

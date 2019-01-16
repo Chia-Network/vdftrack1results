@@ -1,0 +1,26 @@
+import gch
+
+ccflags=' -O3'
+
+env.Append(
+    CCFLAGS= '-march=native' + ccflags,
+    LIBS=['gmpxx', 'gmp']
+);
+
+gch.generate(env);
+
+env['precompiled_header']=File('include.h');
+env['Gch']=env.Gch(target='include.h.gch', source=env['precompiled_header']);
+
+#env.Program('vdf.cpp');
+#env.Program('vdf_new.cpp');
+
+env.Program( 'compile_asm', 'compile_asm.cpp', CCFLAGS = '-march=native -O0' );
+env.Command( 'asm_compiled.s', 'compile_asm', "./compile_asm" );
+env.Program( 'vdf', [ 'vdf.cpp', 'asm_compiled.s' ] );
+
+#env.Program('fma_test', ['fma_test.cpp', 'square.s']);
+#env.Program( 'simd_integer_test', [ 'simd_integer_test.cpp', 'asm_compiled.s' ] );
+#env.Program( 'simd_integer_test', [ 'simd_integer_test.cpp' ] );
+
+#env.Program( 'rho.cpp' );

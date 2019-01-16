@@ -1,0 +1,1 @@
+Submission is written in C instead of C++, includes MPZ function optimizations, memory operation and function inlining where applicable, and uses an optimized MPIR library statically linked for speedup.
